@@ -69,7 +69,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine(value2);
 
             bool boolResult;
-            int x=2;
+            int x=3;
             int y=10;
 
             boolResult = (x == y);
