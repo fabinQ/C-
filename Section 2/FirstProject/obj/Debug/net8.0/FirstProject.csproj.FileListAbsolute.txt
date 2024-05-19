@@ -1,0 +1,45 @@
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.exe
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.deps.json
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.runtimeconfig.json
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.dll
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.pdb
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.AssemblyInfoInputs.cache
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.AssemblyInfo.cs
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.csproj.CoreCompileInputs.cache
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.sourcelink.json
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.dll
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\refint\FirstProject.dll
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.pdb
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.genruntimeconfig.cache
+C:\Users\User\iCloudDrive\C-Sharp\FirstProject\obj\Debug\net8.0\ref\FirstProject.dll
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.exe
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.deps.json
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.runtimeconfig.json
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.dll
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\bin\Debug\net8.0\FirstProject.pdb
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.AssemblyInfoInputs.cache
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.AssemblyInfo.cs
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.csproj.CoreCompileInputs.cache
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.sourcelink.json
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.dll
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\refint\FirstProject.dll
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.pdb
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\FirstProject.genruntimeconfig.cache
+c:\Users\Hyperbook\Documents\Maciej\C-Sharp\FirstProject\obj\Debug\net8.0\ref\FirstProject.dll
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\bin\Debug\net8.0\FirstProject.exe
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\bin\Debug\net8.0\FirstProject.deps.json
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\bin\Debug\net8.0\FirstProject.runtimeconfig.json
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\bin\Debug\net8.0\FirstProject.dll
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\bin\Debug\net8.0\FirstProject.pdb
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.AssemblyInfoInputs.cache
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.AssemblyInfo.cs
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.csproj.CoreCompileInputs.cache
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.sourcelink.json
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.dll
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\refint\FirstProject.dll
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.pdb
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\FirstProject.genruntimeconfig.cache
+C:\Users\Hyperbook\Documents\Maciej\C-Sharp\Section 2\FirstProject\obj\Debug\net8.0\ref\FirstProject.dll
