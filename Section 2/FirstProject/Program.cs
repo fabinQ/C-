@@ -2,6 +2,7 @@
 using System.Collections.Specialized;
 using System.Data;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace MyApp // Note: actual namespace depends on the project name.
@@ -80,6 +81,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int greaterNumber = x>y ? x:y;
             Console.WriteLine("Ternary conditional operator: x>y ? x : y = "+greaterNumber);
             
+
+            Console.WriteLine("Podaj swoj rok urodzenia");
+            string userInput = Console.ReadLine();
+            int year = int.Parse(userInput);
+            bool isOver18 = DateTime.Now.Date.Year - year > 18;
+             if (isOver18){
+                Console.WriteLine("OK");
+             }
+             else{
+                Console.WriteLine("Nie ok.");
+             }
+        }
+            
             
             // Komentarze
             static void Program2(string[] args){
@@ -89,6 +103,5 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Komentarz blokowy 
                 */
             }
-        }
     }
 }
