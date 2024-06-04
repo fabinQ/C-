@@ -1,7 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.WebSockets;
+using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.InteropServices;
 using System.Threading;
+using SecoundProject;
 
 namespace Coding.Exetcise
 {
@@ -54,7 +60,36 @@ namespace Coding.Exetcise
             return result;
         }
     }
-
+  public class TemperatureAnalyzer
+    {
+        // Znajduje najwyższą temperaturę w tablicy temperatur
+        public static int FindHighestTemperature(int[] temperatures)
+        {
+            int temp_max = temperatures[0];
+            foreach (int temp in temperatures)
+            {
+                if (temp_max<temp)
+                {
+                    temp_max = temp;
+                }
+            }
+            return temp_max;
+        }
+    
+        // Znajduje najniższą temperaturę w tablicy temperatur
+        public static int FindLowestTemperature(int[] temperatures)
+        {
+            int temp_min = temperatures[0];
+            foreach (int temp in temperatures)
+            {
+                if (temp_min>temp)
+                {
+                    temp_min = temp;
+                }
+            }
+            return temp_min;
+        }
+    }
     class Program
     {
         static void PrasePhrase()
@@ -193,6 +228,57 @@ namespace Coding.Exetcise
                 }
             }
         }
+  static void forEachLoop()
+        {
+            string[] cars = {"Volvo", "BMW", "Mazda"};
+
+            foreach(string car in cars)
+            {
+                System.Console.WriteLine(car);
+                if (car == "BMW")
+                {
+                    System.Console.WriteLine("Bye");
+                    break;
+                }
+            }
+        }
+
+        static void doWhlieZero()
+        {
+            int sum = 0;
+            int max_number = int.MinValue;
+            int userInput4;
+            do{
+                System.Console.WriteLine("Insert value. Insert 0 to exit.");
+                userInput4 = int.Parse(Console.ReadLine());
+
+                sum += userInput4;
+                if (userInput4>max_number)
+                {
+                    max_number = userInput4;
+                }
+            }while(userInput4 !=0);
+            System.Console.WriteLine($"Sum of numbers {sum}");
+            System.Console.WriteLine($"Max number {max_number}");
+        }
+
+        
+        static void userGender()
+        {
+            System.Console.WriteLine("What is your gernder? 1-Male 2-Famale");
+            string userInput5 = System.Console.ReadLine();
+            Gender userGenderInput = (Gender)Enum.Parse(typeof(Gender), userInput5);
+            System.Console.WriteLine(userGenderInput);
+         
+            if (userGenderInput == Gender.Male)
+            {
+                System.Console.WriteLine("Only Famale are allow.");
+            }
+            else
+            {
+                System.Console.WriteLine("Hi");
+            }
+        }
 
         static void nullableIntValue()
         {
@@ -253,9 +339,17 @@ namespace Coding.Exetcise
             // tableFunction();
 
             // whileFunction();
-            // doWhileFunction();\
-
+            // doWhileFunction();
             // forLoop();
+            // forEachLoop();
+             
+            // int [] temperatures = {-2,-20,3,32,-22,31};
+            // System.Console.WriteLine(TemperatureAnalyzer.FindHighestTemperature(temperatures));
+            // System.Console.WriteLine(TemperatureAnalyzer.FindLowestTemperature(temperatures));
+            
+            // doWhlieZero();
+
+            // userGender();
 
             // nullableIntValue();
 
