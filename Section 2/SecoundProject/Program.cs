@@ -60,7 +60,7 @@ namespace Coding.Exetcise
             return result;
         }
     }
-  public class TemperatureAnalyzer
+    public class TemperatureAnalyzer
     {
         // Znajduje najwyższą temperaturę w tablicy temperatur
         public static int FindHighestTemperature(int[] temperatures)
@@ -68,21 +68,21 @@ namespace Coding.Exetcise
             int temp_max = temperatures[0];
             foreach (int temp in temperatures)
             {
-                if (temp_max<temp)
+                if (temp_max < temp)
                 {
                     temp_max = temp;
                 }
             }
             return temp_max;
         }
-    
+
         // Znajduje najniższą temperaturę w tablicy temperatur
         public static int FindLowestTemperature(int[] temperatures)
         {
             int temp_min = temperatures[0];
             foreach (int temp in temperatures)
             {
-                if (temp_min>temp)
+                if (temp_min > temp)
                 {
                     temp_min = temp;
                 }
@@ -228,11 +228,11 @@ namespace Coding.Exetcise
                 }
             }
         }
-  static void forEachLoop()
+        static void forEachLoop()
         {
-            string[] cars = {"Volvo", "BMW", "Mazda"};
+            string[] cars = { "Volvo", "BMW", "Mazda" };
 
-            foreach(string car in cars)
+            foreach (string car in cars)
             {
                 System.Console.WriteLine(car);
                 if (car == "BMW")
@@ -248,28 +248,29 @@ namespace Coding.Exetcise
             int sum = 0;
             int max_number = int.MinValue;
             int userInput4;
-            do{
+            do
+            {
                 System.Console.WriteLine("Insert value. Insert 0 to exit.");
                 userInput4 = int.Parse(Console.ReadLine());
 
                 sum += userInput4;
-                if (userInput4>max_number)
+                if (userInput4 > max_number)
                 {
                     max_number = userInput4;
                 }
-            }while(userInput4 !=0);
+            } while (userInput4 != 0);
             System.Console.WriteLine($"Sum of numbers {sum}");
             System.Console.WriteLine($"Max number {max_number}");
         }
 
-        
+
         static void userGender()
         {
             System.Console.WriteLine("What is your gernder? 1-Male 2-Famale");
             string userInput5 = System.Console.ReadLine();
             Gender userGenderInput = (Gender)Enum.Parse(typeof(Gender), userInput5);
             System.Console.WriteLine(userGenderInput);
-         
+
             if (userGenderInput == Gender.Male)
             {
                 System.Console.WriteLine("Only Famale are allow.");
@@ -312,11 +313,11 @@ namespace Coding.Exetcise
             }
             catch (IndexOutOfRangeException e)
             {
-                System.Console.WriteLine("Poza rangem.");
+                System.Console.WriteLine("Poza rangem." + e);
             }
             catch (DivideByZeroException e)
             {
-                System.Console.WriteLine("Cholero nie dziel przez zero.");
+                System.Console.WriteLine("Cholero nie dziel przez zero." + e);
             }
             finally
             {
@@ -324,6 +325,16 @@ namespace Coding.Exetcise
             }
         }
 
+        static void daysOfBirth()
+        {
+            System.Console.WriteLine("Insert your date of Birth. DD/MM/YYYY");
+            string dateAsString = System.Console.ReadLine();
+
+            DateTime dateOfBirth = DateTime.Parse(dateAsString);
+
+            TimeSpan dayOfBirth = DateTime.Now - dateOfBirth;
+            Console.WriteLine($"{dayOfBirth.Days} days have passed");
+        }
         static void Main(string[] args)
         {
             // string result = GradeCalculator.CalculateGrade(80);
@@ -342,18 +353,20 @@ namespace Coding.Exetcise
             // doWhileFunction();
             // forLoop();
             // forEachLoop();
-             
+
             // int [] temperatures = {-2,-20,3,32,-22,31};
             // System.Console.WriteLine(TemperatureAnalyzer.FindHighestTemperature(temperatures));
             // System.Console.WriteLine(TemperatureAnalyzer.FindLowestTemperature(temperatures));
-            
+
             // doWhlieZero();
 
             // userGender();
 
             // nullableIntValue();
 
-            TryCatchFunction();
+            // TryCatchFunction();
+
+            daysOfBirth();
         }
     }
 }
