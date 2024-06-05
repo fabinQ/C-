@@ -6,6 +6,7 @@ using System.Net.WebSockets;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Threading;
 using SecoundProject;
 
@@ -335,6 +336,15 @@ namespace Coding.Exetcise
             TimeSpan dayOfBirth = DateTime.Now - dateOfBirth;
             Console.WriteLine($"{dayOfBirth.Days} days have passed");
         }
+        static void regexFraze()
+        {
+            Regex regexWord = new Regex(@"^[a-z0-9]+\.?[a-z0-9]+@[a-z]+\.[a-z]{2,3}$");
+            string email1 = ".test.test1@gmail.com";
+            string email2 = "test.test1@gmail.com";
+
+            System.Console.WriteLine(regexWord.IsMatch(email1));
+            System.Console.WriteLine(regexWord.IsMatch(email2));
+        }
         static void Main(string[] args)
         {
             // string result = GradeCalculator.CalculateGrade(80);
@@ -366,7 +376,9 @@ namespace Coding.Exetcise
 
             // TryCatchFunction();
 
-            daysOfBirth();
+            // daysOfBirth();
+
+            regexFraze();
         }
     }
 }
