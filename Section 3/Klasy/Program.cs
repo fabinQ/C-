@@ -5,10 +5,11 @@ namespace Klasy
     {
         static void Main(string[] args)
         {
-            Person bill = new Person();
-            bill.FirstName = "Bill";
-            bill.SetDateOfBirth(new DateTime(1999, 1, 2));
+            Person2 bill = new Person2("Bill", "Wick");
             bill.SeyHi();
+
+            Person2 john = new Person2(new DateTime(1990,1,3),"John", "Wick");
+            john.SeyHi();
         }
     }
 }
