@@ -14,7 +14,24 @@ namespace Klasy
             john.SetDateOfBirth =new DateTime(1990,6,1);
             john.SeyHi();
             
-            System.Console.WriteLine($"Objects of Person type count: {Person2.Count}");
+            System.Console.WriteLine($"Objects of Person type count: {Person2.Count}\n\n");
+
+            InheritanceClass();
+            
+        }
+
+        static void InheritanceClass()
+        {
+            ExcelFile excelFile = new ExcelFile();
+            excelFile.CreatedOn = DateTime.Now;
+            excelFile.FileName = "excel-file";
+            excelFile.GenerateRaport();
+
+            WordDocumentFile wordFile = new WordDocumentFile();
+            wordFile.CreatedOn = DateTime.Now;
+            wordFile.FileName = "print-file";
+            wordFile.Print();
+            
         }
     }
 }
