@@ -7,30 +7,53 @@ public class Person2
     public string FirstName;
     public string LastName;
     private DateTime dateOfBirth;
+    private string contactNumber;
+    public static int Count =0;
 
     public Person2(string firstName, string lastName)
     {
         System.Console.WriteLine("First constructor");
         FirstName = firstName;
         LastName = lastName;
+        Count ++;
     }
 
-    public Person2(DateTime dateTime, string firstName, string lastName) : this(firstName, lastName)
+    // public Person2(DateTime dateTime, string firstName, string lastName) : this(firstName, lastName)
+    // {
+    //     System.Console.WriteLine("Secound constructor\n");
+    //     SetDateOfBirth(dateTime);
+    // }
+    // public string ContactNumber {get; set;}
+   
+    public string ContactNumber
     {
-        System.Console.WriteLine("Secound constructor");
-        SetDateOfBirth(dateOfBirth);
+        // System.Console.WriteLine("Third constructor");
+        get {return contactNumber;}
+        set 
+        { 
+            if (value.Length<9)
+            System.Console.WriteLine("Invalid contact number");
+            else
+            {
+                contactNumber = value;
+            }
+        }
     }
-    public void SetDateOfBirth(DateTime date)
+    public DateTime SetDateOfBirth
     {
-        if (date > DateTime.Now)
+        set
         {
-            System.Console.WriteLine("Invalid date of birth");
+            if (value > DateTime.Now)
+            {
+                System.Console.WriteLine("Invalid date of birth");
+            }
+            else
+            {
+                System.Console.WriteLine(value);
+                dateOfBirth = value;
+            }
         }
-        else
-        {
-            System.Console.WriteLine(date);
-            dateOfBirth = date;
-        }
+        get {return dateOfBirth;}
     }
     public DateTime GetDateOfBirth() => dateOfBirth;
 
