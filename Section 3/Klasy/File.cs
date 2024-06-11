@@ -3,7 +3,7 @@ using System.Dynamic;
 
 namespace Klasy;
 
-public class File
+public abstract class File
 {
     public string FileName { get; set; }
 
@@ -11,6 +11,8 @@ public class File
 
     public DateTime CreatedOn { get; set; }
 
-    private string PrivateProp {get; set;}
-    protected string ProtectedProp {get; set;}
+    private string PrivateProp { get; set; }
+    protected string ProtectedProp { get; set; }
+
+    public abstract void Compress();
 }

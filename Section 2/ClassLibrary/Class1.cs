@@ -2,8 +2,8 @@
 
 public class Class1
 {
-    internal string InternalString {get; set;}
-    public string PublicString {get; set;}
+    internal string InternalString { get; set; }
+    public string PublicString { get; set; }
 
 
 }

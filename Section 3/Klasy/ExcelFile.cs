@@ -4,7 +4,11 @@ namespace Klasy;
 
 public class ExcelFile : File
 {
-    public void GenerateRaport ()
+    public override void Compress()
+    {
+        System.Console.WriteLine("Compressing ExcelFile");
+    }
+    public void GenerateRaport()
     {
         string prop = ProtectedProp;
         System.Console.WriteLine($"{FileName} raport...");

@@ -310,7 +310,7 @@ namespace Coding.Exetcise
                 int a = 19;
                 // _ = a / 0;
 
-                cars[4] = "Tersla";
+                cars[4] = "Tesla";
             }
             catch (IndexOutOfRangeException e)
             {

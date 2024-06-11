@@ -4,8 +4,11 @@ namespace Klasy;
 
 public class PowerPointFile : File
 {
-
-    public void Present ()
+    public override void Compress()
+    {
+        System.Console.WriteLine("Compressing PowerPointFile");
+    }
+    public void Present()
     {
         System.Console.WriteLine($"{FileName} presenting...");
     }
