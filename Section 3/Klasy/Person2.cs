@@ -26,7 +26,7 @@ public class Person2
     }
 
 
-    public string ContactNumber {get; set;}
+    public string ContactNumber { get; set; }
     /*Gdy nie mamy dodatkowej logiki możemy wykożystać auto-implemented-properties */
     // public string ContactNumber
     // {
@@ -56,7 +56,7 @@ public class Person2
                 dateOfBirth = value;
             }
         }
-        get {return dateOfBirth;}
+        get { return dateOfBirth; }
     }
     // public void SetDateOfBirth(DateTime date)
     // {
