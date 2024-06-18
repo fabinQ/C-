@@ -17,7 +17,7 @@ namespace Klasy
             /*  JOHN    */
             // Person2 john = new Person2("John", "Wick");
             /* Kiedy mamy włąsne konstruktory to możemy wywołać konstruktor z 3 parametrami */
-            Person2 john = new Person2(new DateTime(2000,10,2),"John", "Wick");
+            Person2 john = new Person2(new DateTime(2000, 10, 2), "John", "Wick");
             System.Console.WriteLine("Test get " + john.SetDateOfBirth);
             john.SetDateOfBirth = new DateTime(1990, 6, 1);
             john.SeyHi();
@@ -26,7 +26,7 @@ namespace Klasy
             System.Console.WriteLine($"Objects of Person type count: {Person2.Count}\n\n");
 
 
-            Inherita nceClass();
+            InheritanceClass();
 
             Class1 class1 = new Class1();
             class1.PublicString = "test";
@@ -35,7 +35,7 @@ namespace Klasy
             // i nie możemy utworzyć instancji klasy
             // File file = new File();
 
-            // InterfaceClass();
+            InterfaceClass();
 
             Square value1 = new Square(45);
             System.Console.WriteLine(value1.CalculateArea());
