@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shape
+namespace Coding.Exercise
 {
     public interface ICalculatorAreasAndPerimeters
     {
