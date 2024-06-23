@@ -10,7 +10,6 @@ public class Person2
     private DateTime dateOfBirth;
     private string contactNumber;
     public static int Count = 0;
-
     public Person2(string firstName, string lastName)
     {
         System.Console.WriteLine("First constructor");

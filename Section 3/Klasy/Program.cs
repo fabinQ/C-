@@ -1,6 +1,7 @@
 ﻿using System;
 using ClassLibrary;
 using Coding.Exercise;
+using ShapeNamespace;
 namespace Klasy
 {
     class Program
@@ -24,17 +25,22 @@ namespace Klasy
 
             /* COUNT FUNCTION */
             System.Console.WriteLine($"Objects of Person type count: {Person2.Count}\n\n");
+            System.Console.WriteLine("\n-------------------------------\n");
 
 
+            /* INHERITANCE CLASS METHOD */
             InheritanceClass();
 
+            /* CLASS LIBRARY */
             Class1 class1 = new Class1();
             class1.PublicString = "test";
 
             // Jeśli klasa jest abstakcyjna to służy tylko do dziedziczenia 
             // i nie możemy utworzyć instancji klasy
             // File file = new File();
+            System.Console.WriteLine("\n-------------------------------\n");
 
+            /*INTERFACE*/
             InterfaceClass();
 
             SquareCalculate value1 = new SquareCalculate(4.51);
@@ -44,7 +50,21 @@ namespace Klasy
             CircleCalculate value2 = new CircleCalculate(4.51);
             System.Console.WriteLine(value2.CalculateArea());
             System.Console.WriteLine(value2.CalculatePerimeter());
+            
+            System.Console.WriteLine("\n-------------------------------\n");
+            
+            /*POLIMOR*/
+            PolimorfFunction();
 
+        }
+        public static void PolimorfFunction()
+        {
+            Shape[] shapes = { new Circle(), new Rectangle(), new Triangle() };
+
+            foreach (Shape shape in shapes)
+            {
+                shape.Draw();
+            }
         }
 
         static void InheritanceClass()

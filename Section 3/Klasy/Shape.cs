@@ -1,53 +1,39 @@
 ﻿using System;
 
-namespace Shape
+namespace ShapeNamespace
 {
-    public interface ICalculatorAreasAndPerimeters
+    class Shape
     {
-        // Deklaracja metod w interfejsie bez parametrów.
-        double CalculateArea();
-        double CalculatePerimeter();
-    }
+        public int X { get; set; }
+        public int Y { get; set; }
 
-    public class SquareCalculate : ICalculatorAreasAndPerimeters
-    {
-        // Implementacja klasy Square z metodami interfejsu.
-        public double valueShape { get; set; }
-
-        public SquareCalculate(double valueShape)
+        public virtual void Draw()
         {
-            this.valueShape = valueShape;
-        }
-
-        public double CalculateArea()
-        {
-            return valueShape * valueShape;
-        }
-
-        public double CalculatePerimeter()
-        {
-            return 4 * valueShape;
+            System.Console.WriteLine("Drwaing shape...");
         }
     }
 
-    public class CircleCalculate : ICalculatorAreasAndPerimeters
+    class Circle : Shape
     {
-        // Implementacja klasy Circle z metodami interfejsu.
-        public double valueShape { get; set; }
-
-        public CircleCalculate(double valueShape)
+        public  void Draw()
         {
-            this.valueShape = valueShape;
+            System.Console.WriteLine("Drawing circle");
         }
-
-        public double CalculateArea()
+    }
+    class Rectangle : Shape
+    {
+        public override void Draw()
         {
-            return Math.PI * valueShape * valueShape;
+            base.Draw();
+            System.Console.WriteLine("Drawing rectangle");
         }
+    }
 
-        public double CalculatePerimeter()
+    class Triangle : Shape
+    {
+        public override void Draw()
         {
-            return 2 * Math.PI * valueShape;
+            System.Console.WriteLine("Drawing triangle");
         }
     }
 }
