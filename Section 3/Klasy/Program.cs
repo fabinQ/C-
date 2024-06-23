@@ -37,9 +37,10 @@ namespace Klasy
 
             InterfaceClass();
 
-            Square value1 = new Square(45);
+            Square value1 = new Square(4.51);
             System.Console.WriteLine(value1.CalculateArea());
             System.Console.WriteLine(value1.CalculatePerimeter());
+            
 
         }
 

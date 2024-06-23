@@ -4,48 +4,50 @@ namespace Coding.Exercise
 {
     public interface IShape
     {
+        // Deklaracja metod w interfejsie bez parametrów.
         double CalculateArea();
         double CalculatePerimeter();
     }
 
     public class Square : IShape
     {
-        private double side;
+        // Implementacja klasy Square z metodami interfejsu.
+        public double valueShape { get; set; }
 
-        public Square(double side)
+        public Square(double valueShape)
         {
-            this.side = side;
+            this.valueShape = valueShape;
         }
 
         public double CalculateArea()
         {
-            return side * side;
+            return valueShape * valueShape;
         }
 
         public double CalculatePerimeter()
         {
-            return 4 * side;
+            return 4 * valueShape;
         }
     }
 
     public class Circle : IShape
     {
-        private double radius;
+        // Implementacja klasy Circle z metodami interfejsu.
+        public double valueShape { get; set; }
 
-        public Circle(double radius)
+        public Circle(double valueShape)
         {
-            this.radius = radius;
+            this.valueShape = valueShape;
         }
 
         public double CalculateArea()
         {
-            return Math.PI * radius * radius;
+            return Math.PI * valueShape * valueShape;
         }
 
         public double CalculatePerimeter()
         {
-            return 2 * Math.PI * radius;
+            return 2 * Math.PI * valueShape;
         }
     }
-
 }
