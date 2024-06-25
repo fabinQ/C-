@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ClassLibrary;
 using Coding.Exercise;
 using ShapeNamespace;
@@ -50,13 +51,28 @@ namespace Klasy
             CircleCalculate value2 = new CircleCalculate(4.51);
             System.Console.WriteLine(value2.CalculateArea());
             System.Console.WriteLine(value2.CalculatePerimeter());
-            
+
             System.Console.WriteLine("\n-------------------------------\n");
-            
+
             /*POLIMOR*/
             PolimorfFunction();
 
+            System.Console.WriteLine("\n-------------------------------\n");
+
+            /*GENERIC*/
+            List<int> intList = new List<int>() { 6, 1, 0, 100 };
+            intList.Add(0);
+            DisplayElements(intList);
         }
+
+        static void DisplayElements(List<int> ListToDisplay)
+        {
+            foreach (int element in ListToDisplay)
+            {
+                System.Console.Write($"{element},");
+            }
+        }
+
         public static void PolimorfFunction()
         {
             Shape[] shapes = { new Circle(), new Rectangle(), new Triangle() };
