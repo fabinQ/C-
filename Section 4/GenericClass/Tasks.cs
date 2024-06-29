@@ -17,15 +17,9 @@ namespace Coding.Exercise
         public void RemoveTask(string task)
         {
             // TODO: Uzupełnij implementację metody RemoveTask, aby usuwała zadanie z listy, jeśli istnieje.
-            // Metoda remove nie zwraca wyjątku więc try catch jest nie potrzebne, lecz warto poinformować użytkownika.
-            try
-            {
-                tasks.Remove(task);
-            }
-            catch
-            {
-                System.Console.WriteLine("Valid task value.");
-            }
+            // Metoda remove nie zwraca wyjątku więc try catch jest nie potrzebne
+            tasks.Remove(task);
+
         }
 
         public List<string> GetTasks()

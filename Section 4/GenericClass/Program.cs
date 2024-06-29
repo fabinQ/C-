@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Coding.Exercise;
 using PersonClass;
+using System.Linq;
+using System.Reflection.Metadata;
 
 namespace GenericClass
 {
@@ -54,7 +56,7 @@ namespace GenericClass
             tasks.RemoveTask("Do first!");
             tasks.RemoveTask("Do ");
 
-            foreach( string task in tasks.GetTasks())
+            foreach (string task in tasks.GetTasks())
             {
                 System.Console.WriteLine(task);
             }
@@ -74,18 +76,36 @@ namespace GenericClass
             return employees;
         }
         static List<Person> SortedEmployees(List<Person> employees)
+        /*LINQ*/
         {
-            
-            List<Person> sortedEmployees = new List<Person>();
-            foreach (Person employee in employees )
+            bool EmployeeIsYoung(Person employee)
             {
-                if (employee.GetDateOfBirth() > new DateTime(2000,1,1) )
-                {
-                    sortedEmployees.Add(employee);
-                }
+                return employee.GetDateOfBirth() > new DateTime(2000, 1, 1);
             }
+
+            List<Person> sortedEmployees = employees.Where(EmployeeIsYoung).ToList();
+
             return sortedEmployees;
         }
+        static void SayHiBob(List<Person> sortedEmplyees)
+        /*LINQ*/
+        {
+            bool EmployeeIsBob(Person employee)
+            {
+                return employee.FirstName == "Bob";
+            }
+            Person bob = sortedEmplyees.FirstOrDefault(EmployeeIsBob);
+
+            if (bob != null)
+            {
+                bob.SayHi();
+            }
+            else
+            {
+                System.Console.WriteLine("Bob not found!");
+            }
+        }
+
         static void Main(string[] args)
         {
             /*GENERIC LIST*/
@@ -95,9 +115,15 @@ namespace GenericClass
             System.Console.WriteLine("\n-------------------------------\n");
 
             List<Person> employees = GetEmployees();
+
+
+            /*LINQ*/
             List<Person> sortedEmployees = SortedEmployees(employees);
-            DisplayEmployees(employees);
-            System.Console.WriteLine(employees.Count);
+            DisplayEmployees(sortedEmployees);
+            System.Console.WriteLine($"Young emploees count: {sortedEmployees.Count}");
+            SayHiBob(sortedEmployees);
+
+
 
         }
 
