@@ -138,6 +138,24 @@ namespace GenericClass
             Console.WriteLine($"Matthe average grade is {dicOfPerson.CalculateAverageGrade("Matthew")}");
         }
 
+        public static IEnumerable<int> GetYieldData()
+        {
+            for (int i =0; i<9; i++)
+            {
+                yield return i;
+            }
+
+        }
+        public static IEnumerable<int> GenerateEvenNumbers()
+        {
+            int i = 0;
+            while (true)
+            {
+                yield return i;
+                i+=2;
+            }
+        }
+
         static void Main(string[] args)
         {
             /*GENERIC LIST*/
@@ -160,7 +178,8 @@ namespace GenericClass
             /*Currency, dictionary */
             Dictionary<string,Currency> currencies = GetCurrencies();
             System.Console.WriteLine("Check the rate for: ");
-            string userInput = Console.ReadLine().ToUpper();
+            // string userInput = Console.ReadLine().ToUpper();
+            string userInput = "USD";
             Currency selectedCurrency = null;
             if (currencies.TryGetValue(userInput, out selectedCurrency))
             {
@@ -176,6 +195,26 @@ namespace GenericClass
             /* GradeManager */
             GradeManager();
 
+            System.Console.WriteLine("\n-------------------------------\n");
+
+            /* YIELD */
+            foreach (int i in GetYieldData())
+            {
+                System.Console.WriteLine(i);
+            }
+            
+            // GetYieldData().ToList().ForEach(i => System.Console.WriteLine(i));
+
+            System.Console.WriteLine("\n-------------------------------\n");
+            
+            foreach (int i in GenerateEvenNumbers())
+            {
+                System.Console.WriteLine(i);
+                if (i==8)
+                {
+                    break;
+                }
+            }
         }
 
     }
