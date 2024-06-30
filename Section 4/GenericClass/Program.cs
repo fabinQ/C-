@@ -76,14 +76,10 @@ namespace GenericClass
             return employees;
         }
         static List<Person> SortedEmployees(List<Person> employees)
-        /*LINQ*/
+        /*LINQ
+        LAMBDA */
         {
-            bool EmployeeIsYoung(Person employee)
-            {
-                return employee.GetDateOfBirth() > new DateTime(2000, 1, 1);
-            }
-
-            List<Person> sortedEmployees = employees.Where(EmployeeIsYoung).ToList();
+            List<Person> sortedEmployees = employees.Where(e => e.GetDateOfBirth() > new DateTime(2000, 1, 1)).ToList();
 
             return sortedEmployees;
         }
