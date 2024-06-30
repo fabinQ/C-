@@ -4,6 +4,9 @@ using Coding.Exercise;
 using PersonClass;
 using System.Linq;
 using System.Reflection.Metadata;
+using CurrencyClass;
+using Coding.Exercise.GradeManagerClass;
+using System.Runtime.InteropServices;
 
 namespace GenericClass
 {
@@ -101,6 +104,39 @@ namespace GenericClass
                 System.Console.WriteLine("Bob not found!");
             }
         }
+        public static Dictionary<string, Currency> GetCurrencies()
+        {
+            return new Dictionary<string, Currency>
+            {
+                {"USD", new Currency("USD", "United Stated Dollar", 1.0)},
+                {"EUR", new Currency("EUR", "Euro", 0.83975)},
+                {"GBP", new Currency("GBP", "British Pound", 0.74771)},
+                {"CAD", new Currency("CAD", "Canadian Dollar", 1.30725)},
+                {"INR", new Currency("INR", "Indian Rupe", 73)},
+                {"MXN", new Currency("MXN", "Mexican Peso", 25.7175)},
+                
+            };
+        }
+        public static void GradeManager()
+        {
+            GradeManager dicOfPerson = new GradeManager();
+            dicOfPerson.AddGrade("John", 3);
+            dicOfPerson.AddGrade("John", 5);
+            dicOfPerson.AddGrade("John", 1);
+            dicOfPerson.AddGrade("Matt", 1);
+            dicOfPerson.AddGrade("Matt", 4);
+            dicOfPerson.AddGrade("Matt", 4);
+
+            dicOfPerson.RemoveGrade("John",1);
+            dicOfPerson.RemoveGrade("Matt",1);
+            dicOfPerson.RemoveGrade("Johnny",1);
+            dicOfPerson.RemoveGrade("Matthew",1);
+            
+            Console.WriteLine($"John average grade is {dicOfPerson.CalculateAverageGrade("John")}");
+            Console.WriteLine($"Matt average grade is {dicOfPerson.CalculateAverageGrade("Matt")}");
+            Console.WriteLine($"Johnny average grade is {dicOfPerson.CalculateAverageGrade("Johnny")}");
+            Console.WriteLine($"Matthe average grade is {dicOfPerson.CalculateAverageGrade("Matthew")}");
+        }
 
         static void Main(string[] args)
         {
@@ -119,7 +155,26 @@ namespace GenericClass
             System.Console.WriteLine($"Young emploees count: {sortedEmployees.Count}");
             SayHiBob(sortedEmployees);
 
+            System.Console.WriteLine("\n-------------------------------\n");
+            
+            /*Currency, dictionary */
+            Dictionary<string,Currency> currencies = GetCurrencies();
+            System.Console.WriteLine("Check the rate for: ");
+            string userInput = Console.ReadLine().ToUpper();
+            Currency selectedCurrency = null;
+            if (currencies.TryGetValue(userInput, out selectedCurrency))
+            {
+                System.Console.WriteLine($"Rate for USD to {userInput} is {selectedCurrency.Rate}");
+            }
+            else
+            {
+                System.Console.WriteLine("Currency not found");
+            }
 
+            System.Console.WriteLine("\n-------------------------------\n");
+
+            /* GradeManager */
+            GradeManager();
 
         }
 
