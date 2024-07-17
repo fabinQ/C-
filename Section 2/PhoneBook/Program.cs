@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using Microsoft.VisualBasic;
 
 namespace PhoneBook;
-    public class phoneBook
+    public class PhoneBook
     {
-        Dictionary<string, int> PhoneBookContact = new Dictionary<string, int>();
-        Dictionary<int, string> PhoneBookNumber = new Dictionary<int, string>();
-        public phoneBook (string contactName, int phoneNumber )
+        public Dictionary<int, string> phoneBookNumber = new Dictionary<int, string>();
+        public PhoneBook (string contactName, int phoneNumber )
         {
             string ContactName = contactName;
             int PhoneNumber = phoneNumber;
@@ -15,13 +14,31 @@ namespace PhoneBook;
         }
         private void AddContact(string ContactName, int PhoneNumber)
         {
-            PhoneBookContact.Add(ContactName, PhoneNumber);
-            PhoneBookNumber.Add(PhoneNumber,ContactName);
+            phoneBookNumber.Add(PhoneNumber,ContactName);
         }
-        private phoneBook FindConact(var SeekFragment)
+        private Dictionary<int,string> FindConact(string searchingNumber)
         {
-            
-        }
+            try 
+            {
+                int contactNumber = Int32.Parse(searchingNumber);
+                if (phoneBookNumber.ContainsKey(contactNumber))
+                {
+                    return new Dictionary<int, string>(contactNumber, phoneBookNumber[contactNumber]);
+                }
+                else
+                {
+                    System.Console.WriteLine("Do not conain");
+                }
+            }  
+            return Dictionary(phoneBookNumber.Values(contactNumber), contactNumber);      
+            }
 
+        public void ShowAllRecord()
+        {
+            foreach (var iteam in phoneBookNumber.Keys)
+            {
+                System.Console.WriteLine(phoneBookNumber(iteam));
+            }
+        }
 
     }
