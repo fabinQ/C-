@@ -13,7 +13,7 @@ namespace PhoneBook;
         {
             phoneBookNumber[PhoneNumber] = ContactName;
         }
-        public KeyValuePair<int,string>? FindConact(string searchingValue)
+        public void FindConact(string searchingValue)
         {
             int contactNumber;
             bool isNumber = Int32.TryParse(searchingValue, out contactNumber);
@@ -21,7 +21,7 @@ namespace PhoneBook;
                 {
                     if (phoneBookNumber.ContainsKey(contactNumber))
                     {
-                        return new KeyValuePair<int, string>(contactNumber, phoneBookNumber[contactNumber]);
+                        System.Console.WriteLine(phoneBookNumber[contactNumber]);
                     }
                     else
                     {
@@ -34,18 +34,17 @@ namespace PhoneBook;
                 {
                 if (contact.Value.Equals(searchingValue, StringComparison.OrdinalIgnoreCase))
                     {
-                        return new KeyValuePair<int, string>(contact.Key, contact.Value);
+                        System.Console.WriteLine(contact.Key.ToString(), contact.Value);
                     } 
                 }
             }
-            return null;
         }
 
         public void ShowAllRecord()
         {
             foreach (var iteam in phoneBookNumber)
             {
-                System.Console.WriteLine($"Contact: {iteam.Value} Number:{iteam.Key}");
+                System.Console.WriteLine($"{iteam.Value} {iteam.Key}");
             }
         }
 
@@ -59,19 +58,35 @@ namespace PhoneBook;
 
                 while (true)
                 {
+                    bool exitOption = false;
                     System.Console.WriteLine("What do you want?");
-                    System.Console.WriteLine("1. Add contact.\n2.Search contact.\n3.Show all. ");
+                    System.Console.WriteLine("1. Add contact.\n2. Search contact.\n3. Show all. \n4. Exit ");
                     string choice = System.Console.ReadLine();
                     int intChoice;
                     Int32.TryParse(choice, out intChoice);
                     switch (intChoice)
                     {
                         case 1:
-                            System.Console.WriteLine("case 1");
+                            System.Console.WriteLine("Enter your new contact name.");
+                            string NewContactName = System.Console.ReadLine();
+                            System.Console.WriteLine("and contact number.");
+                            int NewContactNumber = Int32.Parse(System.Console.ReadLine());
+                            phoneBook.AddContact(NewContactName, NewContactNumber);
+                            break;
                         case 2:
-                            System.Console.WriteLine("case 2");
-
+                            System.Console.WriteLine("Enter your contact.");
+                            string searchingContact = System.Console.ReadLine();
+                            phoneBook.FindConact(searchingContact);
+                            break;
+                        case 3:
+                            phoneBook.ShowAllRecord();
+                            break;
+                        case 4:
+                            exitOption = true;
+                            break;
                     }
+                
+                if (exitOption== true) break;
                 }
             }
         }
