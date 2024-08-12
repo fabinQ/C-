@@ -11,8 +11,8 @@ namespace PhoneBook;
         static void Main(string[] args)
         {
             System.Console.WriteLine("What do you want?");
-            System.Console.WriteLine("1. Add contact.\n2. Search contact.\n3. Show all. \n4. Exit ");
-
+            System.Console.WriteLine("1. Add contact.\n2. Display contact by number.\n3. Display all contacts. \n4. Search contacts");
+            var phoneBook = new PhoneBook();
             
             var Inputchoice = System.Console.ReadLine();
             
@@ -27,18 +27,21 @@ namespace PhoneBook;
 
                     var newContact = new Contact(NewContactName, NewContactNumber);
                     
-                    PhoneBook.AddContact(newContact);
+                    
+                    phoneBook.AddContact(newContact);
                     break;
                 case "2":
-                    System.Console.WriteLine("Enter your contact.");
+                    System.Console.WriteLine("Insert your contact.");
                     string searchingContact = System.Console.ReadLine();
-                    phoneBook.FindConact(searchingContact);
+                    phoneBook.DisplayContact(searchingContact);
                     break;
                 case "3":
-                    phoneBook.ShowAllRecord();
+                    phoneBook.DisplayAllContact();
                     break;
                 case "4":
-                    exitOption = true;
+                    System.Console.WriteLine("Insert searching fragment.");
+                    string searchingFragment = System.Console.ReadLine();
+                    phoneBook.DisplayMatchingContacts(searchingFragment);
                     break;
                 default:
                     System.Console.WriteLine("Invalid operation");
