@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Microsoft.VisualBasic;
@@ -27,9 +28,15 @@ namespace PhoneBook;
                         System.Console.WriteLine("and contact number.");
                         string NewContactNumber = System.Console.ReadLine();
 
-                        var newContact = new Contact(NewContactName, NewContactNumber);
-                        
-                        phoneBook.AddContact(newContact);
+                        try
+                        {
+                            var newContact = new Contact(NewContactName, NewContactNumber);
+                            phoneBook.AddContact(newContact);
+                        }
+                        catch (Exception e)
+                        {
+                            System.Console.WriteLine(e);
+                        }
                         break;
                     case "2":
                         System.Console.WriteLine("Insert contactnumber.");
