@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
@@ -12,7 +13,7 @@ namespace PhoneBook;
         static void Main(string[] args)
         {
             System.Console.WriteLine("What do you want?");
-            System.Console.WriteLine("1. Add contact.\n2. Display contact by number.\n3. Display all contacts. \n4. Search contacts\nTo exit press x");
+            System.Console.WriteLine("1. Add contact.\n2. Display contact by number.\n3. Display all contacts. \n4. Search contacts\n5. Delete contact\nTo exit press x");
             var phoneBook = new PhoneBook();
             
             
@@ -50,6 +51,23 @@ namespace PhoneBook;
                         System.Console.WriteLine("Insert searching fragment.");
                         string searchingFragment = System.Console.ReadLine();
                         phoneBook.DisplayMatchingContacts(searchingFragment);
+                        break;
+                    case "5":
+                        System.Console.WriteLine("Do you want to see all your contacts and select one to delete or remove a specific one?");
+                        System.Console.WriteLine("1. See all.\n2.Remove");
+                        var userInput = System.Console.ReadLine();
+                            switch(userInput)
+                            {
+                                case "1":
+                                    phoneBook.DisplayAllContact();
+                                    phoneBook.DeleteContact();
+                                    break;
+                                case "2":
+                                    phoneBook.DeleteContact();
+                                    break;
+                            }
+
+
                         break;
                     case "x":
                         return;

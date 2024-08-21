@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using Microsoft.VisualBasic;
 
 namespace PhoneBook;
 
@@ -51,4 +53,20 @@ class PhoneBook
         var matchingContacts = Contacts.Where(c =>c.Name.Contains(searchPhrase)).ToList();
         DisplayContactsDitails(matchingContacts);
      }
+    public void DeleteContact()
+    {
+        System.Console.WriteLine("Which one do you want to delete?");
+        string contactToDelete = System.Console.ReadLine();
+        var contact = Contacts.FirstOrDefault(c =>c.Name == contactToDelete || c.Number == contactToDelete);
+        try
+        {
+            if (contact == null ) throw new ArgumentNullException("There is no such contact");
+            Contacts.Remove(contact);
+            DisplayAllContact();
+        }
+        catch (Exception e)
+        {
+            System.Console.WriteLine($"Can't delete contact. {e.Message}");
+        }
+    }
 }
