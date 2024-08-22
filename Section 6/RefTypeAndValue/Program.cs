@@ -15,6 +15,26 @@ public class Program
         value = value *2;
         System.Console.WriteLine(value);
     }
+    public static bool TryParseToNegative (string input, out int result)
+    {
+        if (int.TryParse(input, out result))
+        {
+            if (result<0)
+            {
+                return true;
+            }
+            else
+            {
+                result = default;
+                return false;
+            }
+        }
+        else
+        {
+            result = default;
+            return false;
+        }
+    }
     static void Main(string[] args)
     {
         int someValue = 5;
@@ -32,5 +52,14 @@ public class Program
         {
             System.Console.WriteLine($"{value} is not divided by {factor}. Remider is {reminder}");
         }
+
+
+        int result;
+        string input;
+        while(!TryParseToNegative (System.Console.ReadLine(), out result))
+        {
+            System.Console.WriteLine("\nInsert negative number.");
+        }
+        System.Console.WriteLine($"Negative value: {result}");
     }
 }
