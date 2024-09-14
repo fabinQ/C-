@@ -70,12 +70,54 @@ public class Program
         Car car1 = new Car(horsePower1);
         Car car2 = new Car(horsePower2);
         bool referenceTypeEquality = car1.Equals(car2);
+        bool referenceTypeEquality2 = car1 == car2;
 
         System.Console.WriteLine($"Value Type Equality {valueTypeEquality}");
         System.Console.WriteLine($"Reference Type Equality {referenceTypeEquality}");
+        System.Console.WriteLine($"== {referenceTypeEquality2}");
+        ////////////////////////////////////////////////////////////////
+        
+
     }
-    public class Car
+    public class ApiClient
     {
+        private string baseUrl = "https://our-api-dev.com";
+        private const string getUserEndpoint = "/api/clients";
+        private HttpClient httpClient = new HttpClient();
+        private int defaultPort = 80;
+
+        public void GetUsers()
+        {
+            var getUserUri = $"{baseUrl}{getUserEndpoint}";
+            httpClient.GetAsync(getUserUri);
+
+        }
+
+        public void PostUsers()
+        {
+
+        }
+
+        public void GetResources()
+        {
+            
+        }
+    }
+
+internal class GetResources
+{
+}
+
+public class Car
+    {
+        public static bool operator ==(Car left, Car right)
+        {
+            return Equals(left, right);
+        }
+        public static bool operator !=(Car left, Car right)
+        {
+            return !Equals(left, right);
+        }
         public override bool Equals(object? obj)
         {
             if (obj == null)
