@@ -81,16 +81,25 @@ public class Program
     }
     public class ApiClient
     {
-        private string baseUrl = "https://our-api-dev.com";
+        private readonly string baseUrl = "https://our-api-dev.com";
         private const string getUserEndpoint = "/api/clients";
         private HttpClient httpClient = new HttpClient();
         private int defaultPort = 80;
 
+        public ApiClient(string _baseUrl)
+        {
+            baseUrl = "https://our-api-test.com";
+        }
         public void GetUsers()
         {
             var getUserUri = $"{baseUrl}{getUserEndpoint}";
+            // getUserEndpoint = "sadsad";
+            // baseUrl = "https://our-api-test.com";
+            // Różnica między readonly oraz const jest taka, że readonly można zmienić tylko w konstruktorze,
+            // a cons jest zawsze stałe. Const można użyć tylko do liczbowej i string.
+            //HTTP GET request @ getUserUri
             httpClient.GetAsync(getUserUri);
-
+            // return users
         }
 
         public void PostUsers()
