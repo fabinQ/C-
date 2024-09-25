@@ -14,28 +14,26 @@ public class Kata
         int currentIndex = 0;
         for (int i = 0; i < input.Length; i++)
         {
-            if(input[i] == separator)
+            if (input[i] == separator)
             {
                 string word = input.Substring(currentIndex, i - currentIndex);
                 result.Add(word);
-                currentIndex = i+1;
+                currentIndex = i + 1;
             }
-            else if(i == input.Length-1)
+            else if (i == input.Length - 1)
             {
-                string word = input.Substring(currentIndex, input.Length-currentIndex);
+                string word = input.Substring(currentIndex, input.Length - currentIndex);
                 result.Add(word);
             }
         }
         return result;
     }
+
     public static string ReverseWords(string str)
     {
-        
-
-        System.Console.WriteLine("New string");
-        string [] newString = str.Split();
-        System.Console.WriteLine(newString);
-        return "";
+        List<string> wordsList = Split(str, ' ');
+        wordsList.Reverse();
+        string reversString = string.Join(' ', wordsList);
+        return reversString;
     }
-    string returnString = Kata.ReverseWords("Dupa Jaś, jesteś dupa.");
 }
