@@ -1,5 +1,5 @@
 using System.Runtime.CompilerServices;
-
+using NUnit.Framework;
 namespace Kata;
 
 public class Tests
@@ -29,5 +29,36 @@ public class Tests
         Assert.AreEqual("kata editor", Kata.ReverseWords("editor kata"));
         Assert.AreEqual("boat your row row row", Kata.ReverseWords("row row row your boat"));
         Assert.AreEqual("", Kata.ReverseWords(""));
+    }
+    [Test]
+    public void Ex1()
+    {
+        char[][] house =
+        {
+            "  o                o        #######".ToCharArray(),
+            "###############             #     #".ToCharArray(),
+            "#             #        o    #     #".ToCharArray(),
+            "#  X          ###############     #".ToCharArray(),
+            "#                                 #".ToCharArray(),
+            "###################################".ToCharArray()
+        };
+        Assert.AreEqual(true, Dinglemouse.AllAlone(house));
+    }
+
+    [Test]
+    public void Ex2()
+    {
+        char[][] house =
+        {
+            "#################             ".ToCharArray(),
+            "#     o         #   o         ".ToCharArray(),
+            "#          ######        o    ".ToCharArray(),
+            "####       #                  ".ToCharArray(),
+            "   #       ###################".ToCharArray(),
+            "   #                         #".ToCharArray(),
+            "   #                  X      #".ToCharArray(),
+            "   ###########################".ToCharArray()
+        };
+        Assert.AreEqual(false, Dinglemouse.AllAlone(house));
     }
 }
