@@ -43,7 +43,7 @@ public class Program
         var files = Directory.GetFiles(@".\..\..\..\..\..\Section 8\Documents\Append\", "*.txt", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            File.AppendAllText(file, String.Join(Environment.NewLine,"All right reserved"));
+            File.AppendAllText(file, String.Join(Environment.NewLine, "All right reserved"));
         }
 
     }
@@ -52,5 +52,9 @@ public class Program
         // ReadFiles();
         // GenerateDocuments();
         ScanAndAppend();
+
+        var serialization = new Serialization();
+        serialization.serializationToJSON();
+        serialization.serializationFromJSON();
     }
 }

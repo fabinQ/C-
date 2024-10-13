@@ -2,5 +2,11 @@
 	"editor.defaultFormatter": "ms-dotnettools.csharp",
 	"[csharp]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp"
-	}
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"json.schemas": [
+		
+	]
 }
