@@ -56,5 +56,8 @@ public class Program
         var serialization = new Serialization();
         serialization.serializationToJSON();
         serialization.serializationFromJSON();
+
+        var garbage = new GarbageCollectorUsing();
+        garbage.GBUsing();
     }
 }
