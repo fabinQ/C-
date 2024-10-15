@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata", "..\Section 7\Kata\K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileProject", "..\Section 8\FileProject\FileProject.csproj", "{ACC51DBC-7DAC-4230-89AF-F44E56FAB381}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMethods", "..\Section 9\HelperMethods\HelperMethods.csproj", "{A48EDA54-D17F-4F11-9A94-DE424D4BA558}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{ACC51DBC-7DAC-4230-89AF-F44E56FAB381}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACC51DBC-7DAC-4230-89AF-F44E56FAB381}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACC51DBC-7DAC-4230-89AF-F44E56FAB381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48EDA54-D17F-4F11-9A94-DE424D4BA558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48EDA54-D17F-4F11-9A94-DE424D4BA558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48EDA54-D17F-4F11-9A94-DE424D4BA558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48EDA54-D17F-4F11-9A94-DE424D4BA558}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
