@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileProject", "FileProject.csproj", "{B415BA66-DEB3-4DA4-A19A-4ADD29ED8A7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelperMethods", "HelperMethods", "{97E9B56A-2A4F-49C7-B9FA-733FEE43C51B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "..\..\Section 9\HelperMethods", "..\..\Section 9\HelperMethods", "{F73F06A6-7F41-4638-B231-4E5D29FF0DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMethods", "..\..\Section 9\HelperMethods\HelperMethods.csproj", "{AB70D640-6860-40DD-A29E-06F80844EF59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B415BA66-DEB3-4DA4-A19A-4ADD29ED8A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B415BA66-DEB3-4DA4-A19A-4ADD29ED8A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B415BA66-DEB3-4DA4-A19A-4ADD29ED8A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B415BA66-DEB3-4DA4-A19A-4ADD29ED8A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB70D640-6860-40DD-A29E-06F80844EF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB70D640-6860-40DD-A29E-06F80844EF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB70D640-6860-40DD-A29E-06F80844EF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB70D640-6860-40DD-A29E-06F80844EF59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1762F882-EC0F-40A2-A48A-481D5B9AB971}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB70D640-6860-40DD-A29E-06F80844EF59} = {F73F06A6-7F41-4638-B231-4E5D29FF0DC9}
+	EndGlobalSection
+EndGlobal

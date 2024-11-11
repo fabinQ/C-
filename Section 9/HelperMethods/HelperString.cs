@@ -12,5 +12,9 @@ public class HelperString
 
     }
 
-    public void 
+    public void SubString()
+    {
+        
+    }
+    
 }

@@ -6,7 +6,9 @@ namespace HelperMethods // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            HelperString helperString = new HelperString();
+            helperString.helperMain();
+            
         }
     }
 }
