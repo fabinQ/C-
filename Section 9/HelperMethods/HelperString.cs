@@ -1,5 +1,7 @@
 using System;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace HelperMethods;
 
@@ -16,6 +18,10 @@ public class HelperString
         AlterTextCase(userInput);
         Split(userInput);
         CheckString(userInput );
+
+        KebabToCamelCase("to-jest-kebab-case");
+        CamelCaseToKebab("toJestCamelCase");
+
     }
 
     static void SubString(string userInput)
@@ -87,4 +93,45 @@ public class HelperString
         System.Console.WriteLine($"containsText: {containsText}");
         System.Console.WriteLine();
     }
+    static void KebabToCamelCase(string input)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i=0; i< input.Length; i++)
+        {
+            char currentChar = input[i];
+            if(currentChar != '-')
+            {
+               sb.Append(currentChar);
+            }
+            else
+            {
+                char nextChar = input[i+1];
+                sb.Append(char.ToUpper(nextChar));
+                i++;
+            }
+        }
+        System.Console.WriteLine(sb.ToString());
+    }
+    static void CamelCaseToKebab(string camelString)
+    {
+        StringBuilder sb = new StringBuilder();
+        foreach ( char currentChar in camelString)
+        {
+        
+            bool isUpper = char.IsUpper(currentChar);
+            if(isUpper)
+            {
+                char lowerChar = char.ToLower(currentChar);
+                sb.Append('-');
+                sb.Append(lowerChar);
+            }
+            else
+            {
+                sb.Append(currentChar);
+            }
+        }
+        System.Console.WriteLine(sb);
+    }
 }
+
